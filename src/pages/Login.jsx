@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Loader } from 'lucide-react';
+import logo from '../images/logo.jpeg';
 
 export default function Login() {
   const { login } = useAuth();
@@ -27,9 +28,8 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-indigo-950 flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-md">
-        <div className="mb-8 text-center">
-          <p className="text-3xl font-extrabold text-indigo-700">F2 Drop</p>
-          <p className="text-gray-500 text-sm mt-1">Admin Portal</p>
+        <div className="mb-8 flex justify-center">
+          <img src={logo} alt="F2 Drop" className="h-16 w-auto object-contain" />
         </div>
 
         {error && (
